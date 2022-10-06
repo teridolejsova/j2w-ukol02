@@ -10,6 +10,6 @@
 </head>
 <body style="background-image: url(${nahodnyObrazek});">
 
-<blockquote><strong>Debugging</strong> /de·bugh·ing/ <em>verb</em><br/>${nahodnyCitat}</blockquote>
+<blockquote><strong>Citáty</strong> <br/>${nahodnyCitat}</blockquote>
 </body>
 </html>

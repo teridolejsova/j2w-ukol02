@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 @Controller
 public class CitatyControlLer {
+    public final Random random = new Random();
     List<String> obrazky =List.of("https://source.unsplash.com/j9Kp9Tq-BmE",
             "https://source.unsplash.com/2PODhmrvLik",
             "https://source.unsplash.com/QFc2kxpXVYQ",
@@ -23,9 +23,8 @@ public class CitatyControlLer {
             "https://source.unsplash.com/4qgJ2E28Uvw");
 
 
-    @GetMapping("/citaty")
+    @GetMapping("/")
     public ModelAndView nahodneCitaty() throws IOException {
-        Random random = new Random();
 
         List<String> randomCitaty = FilesReader.readAllLines("citaty.txt");
         int pocetCitatu = randomCitaty.size();
